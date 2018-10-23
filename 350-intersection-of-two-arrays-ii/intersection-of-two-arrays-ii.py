@@ -32,6 +32,7 @@
 #
 
 
+from collections import defaultdict
 class Solution:
     def intersect(self, nums1, nums2):
         """
@@ -39,15 +40,21 @@ class Solution:
         :type nums2: List[int]
         :rtype: List[int]
         """
-        n = len(nums1)
-        m = len(nums2)
-        if n > m:
-            n, m, nums1, nums2 = m, n, nums2, nums1
+        # result = []
+        # for i in range(len(nums1)):
+        #     if nums1[i] in nums2:
+        #         result.append(nums1[i])
+        #         nums2.remove(nums1[i])
+        # return result
         result = []
-        for num in nums1:
-            if num in nums2:
-                result.append(num)
-                nums2.remove(num)
+        dic = defaultdict(int)
+        for n in nums1:
+            dic[n] += 1
+        for n in nums2:
+            if dic[n] > 0:
+                result.append(n)
+                dic[n] -= 1
         return result
+                
             
         
