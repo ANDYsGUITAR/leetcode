@@ -22,9 +22,13 @@ class Solution:
         :type s: str
         :rtype: int
         """
+        dic = {}
         for c in s:
-            if c in s[s.index(c)+1:]:
-                continue
+            if c in dic:
+                dic[c] += 1
             else:
+                dic[c] = 1
+        for c in s:
+            if dic[c] == 1:
                 return s.index(c)
         return -1
