@@ -36,6 +36,7 @@ class listNode(object):
     def __init__(self,val):
         self.val = val
         self.next = None
+        self.prev = None
 
 class MyLinkedList:
 
@@ -43,6 +44,11 @@ class MyLinkedList:
         """
         Initialize your data structure here.
         """
+        # singly
+        # self.head = listNode(None)
+        # self.length = 0
+        # self.tail = listNode(None)
+        
         self.head = listNode(None)
         self.length = 0
         self.tail = listNode(None)
@@ -53,6 +59,16 @@ class MyLinkedList:
         :type index: int
         :rtype: int
         """
+        # if index not in range(self.length):
+        #     return -1
+        # else:
+        #     i = 0
+        #     cur = self.head
+        #     while i != index:
+        #         cur = cur.next
+        #         i += 1
+        #     return cur.val
+        
         if index not in range(self.length):
             return -1
         else:
@@ -69,11 +85,16 @@ class MyLinkedList:
         :type val: int
         :rtype: void
         """
+        # newHead = listNode(val)
+        # newHead.next = self.head
+        # self.head = newHead
+        # self.length += 1
         newHead = listNode(val)
         newHead.next = self.head
+        newHead.prev = None
+        self.head.prev = newHead
         self.head = newHead
         self.length += 1
-        
 
     def addAtTail(self, val):
         """
@@ -81,12 +102,23 @@ class MyLinkedList:
         :type val: int
         :rtype: void
         """
+        # newTail = listNode(val)
+        # i = 0
+        # cur = self.head
+        # while i != self.length-1:
+        #     cur = cur.next
+        #     i += 1
+        # cur.next = newTail
+        # self.length += 1
+        
         newTail = listNode(val)
         i = 0
         cur = self.head
-        while i != self.length-1:
+        while i != self.length - 1:
             cur = cur.next
             i += 1
+        newTail.prev = cur
+        newTail.next = None
         cur.next = newTail
         self.length += 1
 
@@ -98,6 +130,23 @@ class MyLinkedList:
         :rtype: void
         """
 
+        # if index < 0 or index > self.length:
+        #     return
+        # if index == 0:
+        #     self.addAtHead(val)
+        # elif index == self.length:
+        #     self.addAtTail(val)
+        # else:
+        #     newNode = listNode(val)
+        #     i = 0
+        #     prev = self.head
+        #     while i != index - 1:
+        #         prev = prev.next
+        #         i += 1
+        #     newNode.next = prev.next
+        #     prev.next = newNode
+        #     self.length += 1
+        
         if index < 0 or index > self.length:
             return
         if index == 0:
@@ -107,14 +156,17 @@ class MyLinkedList:
         else:
             newNode = listNode(val)
             i = 0
-            prev = self.head
-            while i != index - 1:
-                prev = prev.next
+            cur = self.head
+            while i != index:
+                cur = cur.next
                 i += 1
-            newNode.next = prev.next
+            prev = cur.prev
+            newNode.prev = prev
+            newNode.next = cur
             prev.next = newNode
+            cur.prev = newNode
             self.length += 1
-                
+            
         
 
     def deleteAtIndex(self, index):
@@ -123,18 +175,45 @@ class MyLinkedList:
         :type index: int
         :rtype: void
         """
+        # if index not in range(self.length):
+        #     return
+        # if index == 0:
+        #     self.head = head.next
+        #     self.length -= 1
+        # else:
+        #     i = 0
+        #     prev = self.head
+        #     while i != index - 1:
+        #         prev = prev.next
+        #         i += 1
+        #     prev.next = prev.next.next
+        #     self.length -= 1
+        
         if index not in range(self.length):
             return
         if index == 0:
-            self.head = head.next
+            newHead = self.head.next
+            newHead.prev = None
+            self.head = newHead
+            self.length -= 1
+        elif index == self.length - 1:
+            i = 0
+            cur = self.head
+            while i != index:
+                cur = cur.next
+                i += 1
+            newTail = cur.prev
+            newTail.next = None
             self.length -= 1
         else:
             i = 0
-            prev = self.head
-            while i != index - 1:
-                prev = prev.next
+            cur = self.head
+            while i != index:
+                cur = cur.next
                 i += 1
-            prev.next = prev.next.next
+            prev = cur.prev
+            prev.next = cur.next
+            cur.next.prev = prev
             self.length -= 1
             
 

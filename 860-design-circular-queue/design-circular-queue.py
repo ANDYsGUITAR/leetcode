@@ -19,7 +19,7 @@
 # Example:
 #
 #
-# MyCircularQueue circularQueue = new MycircularQueue(3); // set the size to be 3
+# MyCircularQueue circularQueue = new MyCircularQueue(3); // set the size to be 3
 # circularQueue.enQueue(1);  // return true
 # circularQueue.enQueue(2);  // return true
 # circularQueue.enQueue(3);  // return true

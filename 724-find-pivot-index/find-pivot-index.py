@@ -4,8 +4,8 @@
 #
 # If no such index exists, we should return -1. If there are multiple pivot indexes, you should return the left-most pivot index.
 #
-#
 # Example 1:
+#
 #
 # Input: 
 # nums = [1, 7, 3, 6, 5, 6]
@@ -15,8 +15,10 @@
 # Also, 3 is the first index where this occurs.
 #
 #
+#  
 #
 # Example 2:
+#
 #
 # Input: 
 # nums = [1, 2, 3]
@@ -25,10 +27,16 @@
 # There is no index that satisfies the conditions in the problem statement.
 #
 #
+#  
 #
 # Note:
-# The length of nums will be in the range [0, 10000].
-# Each element nums[i] will be an integer in the range [-1000, 1000].
+#
+#
+# 	The length of nums will be in the range [0, 10000].
+# 	Each element nums[i] will be an integer in the range [-1000, 1000].
+#
+#
+#  
 #
 
 

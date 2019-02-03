@@ -25,11 +25,21 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
-        rest_dict = {}
-        n = len(numbers)
-        for i in range(n):
-            rest = target - numbers[i]
-            if rest in rest_dict:
-                return [rest_dict[rest]+1,i+1]
+        # rest_dict = {}
+        # n = len(numbers)
+        # for i in range(n):
+        #     rest = target - numbers[i]
+        #     if rest in rest_dict:
+        #         return [rest_dict[rest]+1,i+1]
+        #     else:
+        #         rest_dict[numbers[i]] = i
+        left, right = 0, len(numbers)-1
+        while left <= right:
+            tmp = numbers[left]+numbers[right]
+            if tmp == target:
+                return [left+1, right+1]
+            elif tmp > target:
+                right -= 1
             else:
-                rest_dict[numbers[i]] = i
+                left += 1
+        
