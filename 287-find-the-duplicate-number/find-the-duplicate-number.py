@@ -31,8 +31,14 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        dic = defaultdict(int)
-        for n in nums:
-            dic[n] += 1
-            if dic[n] > 1:
-                return n
+        # dic = defaultdict(int)
+        # for n in nums:
+        #     dic[n] += 1
+        #     if dic[n] > 1:
+        #         return n
+        
+        visited = set()
+        for num in nums:
+            if num in visited:
+                return num
+            visited.add(num)

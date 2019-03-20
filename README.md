@@ -1,9 +1,9 @@
 # :pencil2: Leetcode Solutions with Python,Python3
-Update time:  2019-03-20 13:42:15
+Update time:  2019-03-20 18:05:36
 
 Auto created by [leetcode_generate](https://github.com/bonfy/leetcode)
 
-I have solved **439   /   961** problems
+I have solved **445   /   961** problems
 while there are **140** problems still locked.
 
 If you want to use this tool please follow this [Usage Guide](https://github.com/bonfy/leetcode/blob/master/README_leetcode_generate.md)
@@ -280,25 +280,25 @@ If you are loving solving problems in leetcode, please contact me to enjoy it to
 |279|[perfect-squares](https://leetcode.com/problems/perfect-squares)|[Python](https://github.com/ANDYsGUITAR/leetcode/blob/master/279-perfect-squares/perfect-squares.py)||Medium|
 |280|[wiggle-sort](https://leetcode.com/problems/wiggle-sort)|:lock:|[:memo:](https://leetcode.com/articles/wiggle-sort/)|Medium|
 |281|[zigzag-iterator](https://leetcode.com/problems/zigzag-iterator)|:lock:||Medium|
-|282|[expression-add-operators](https://leetcode.com/problems/expression-add-operators)||[:memo:](https://leetcode.com/articles/expression-add-operators/)|Hard|
+|282|[expression-add-operators](https://leetcode.com/problems/expression-add-operators)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/282-expression-add-operators/expression-add-operators.py)|[:memo:](https://leetcode.com/articles/expression-add-operators/)|Hard|
 |283|[move-zeroes](https://leetcode.com/problems/move-zeroes)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/283-move-zeroes/move-zeroes.py)|[:memo:](https://leetcode.com/articles/move-zeroes/)|Easy|
-|284|[peeking-iterator](https://leetcode.com/problems/peeking-iterator)|||Medium|
+|284|[peeking-iterator](https://leetcode.com/problems/peeking-iterator)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/284-peeking-iterator/peeking-iterator.py)||Medium|
 |285|[inorder-successor-in-bst](https://leetcode.com/problems/inorder-successor-in-bst)|:lock:||Medium|
 |286|[walls-and-gates](https://leetcode.com/problems/walls-and-gates)|:lock:|[:memo:](https://leetcode.com/articles/walls-and-gates/)|Medium|
 |287|[find-the-duplicate-number](https://leetcode.com/problems/find-the-duplicate-number)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/287-find-the-duplicate-number/find-the-duplicate-number.py)|[:memo:](https://leetcode.com/articles/find-the-duplicate-number/)|Medium|
 |288|[unique-word-abbreviation](https://leetcode.com/problems/unique-word-abbreviation)|:lock:|[:memo:](https://leetcode.com/articles/unique-word-abbreviation/)|Medium|
-|289|[game-of-life](https://leetcode.com/problems/game-of-life)|||Medium|
+|289|[game-of-life](https://leetcode.com/problems/game-of-life)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/289-game-of-life/game-of-life.py)||Medium|
 |290|[word-pattern](https://leetcode.com/problems/word-pattern)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/290-word-pattern/word-pattern.py)||Easy|
 |291|[word-pattern-ii](https://leetcode.com/problems/word-pattern-ii)|:lock:||Hard|
 |292|[nim-game](https://leetcode.com/problems/nim-game)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/292-nim-game/nim-game.py)|[:memo:](https://leetcode.com/articles/nim-game/)|Easy|
 |293|[flip-game](https://leetcode.com/problems/flip-game)|:lock:||Easy|
 |294|[flip-game-ii](https://leetcode.com/problems/flip-game-ii)|:lock:||Medium|
-|295|[find-median-from-data-stream](https://leetcode.com/problems/find-median-from-data-stream)||[:memo:](https://leetcode.com/articles/find-median-from-data-stream/)|Hard|
+|295|[find-median-from-data-stream](https://leetcode.com/problems/find-median-from-data-stream)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/295-find-median-from-data-stream/find-median-from-data-stream.py)|[:memo:](https://leetcode.com/articles/find-median-from-data-stream/)|Hard|
 |296|[best-meeting-point](https://leetcode.com/problems/best-meeting-point)|:lock:|[:memo:](https://leetcode.com/articles/best-meeting-point/)|Hard|
 |297|[serialize-and-deserialize-binary-tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/297-serialize-and-deserialize-binary-tree/serialize-and-deserialize-binary-tree.py)|[:memo:](https://leetcode.com/articles/serialize-and-deserialize-binary-tree/)|Hard|
 |298|[binary-tree-longest-consecutive-sequence](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence)|:lock:|[:memo:](https://leetcode.com/articles/binary-tree-longest-consecutive-sequence/)|Medium|
-|299|[bulls-and-cows](https://leetcode.com/problems/bulls-and-cows)|||Medium|
-|300|[longest-increasing-subsequence](https://leetcode.com/problems/longest-increasing-subsequence)||[:memo:](https://leetcode.com/articles/longest-increasing-subsequence/)|Medium|
+|299|[bulls-and-cows](https://leetcode.com/problems/bulls-and-cows)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/299-bulls-and-cows/bulls-and-cows.py)||Medium|
+|300|[longest-increasing-subsequence](https://leetcode.com/problems/longest-increasing-subsequence)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/300-longest-increasing-subsequence/longest-increasing-subsequence.py)|[:memo:](https://leetcode.com/articles/longest-increasing-subsequence/)|Medium|
 |301|[remove-invalid-parentheses](https://leetcode.com/problems/remove-invalid-parentheses)||[:memo:](https://leetcode.com/articles/remove-invalid-parentheses/)|Hard|
 |302|[smallest-rectangle-enclosing-black-pixels](https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels)|:lock:|[:memo:](https://leetcode.com/articles/smallest-rectangle-enclosing-black-pixels/)|Hard|
 |303|[range-sum-query-immutable](https://leetcode.com/problems/range-sum-query-immutable)|[Python3](https://github.com/ANDYsGUITAR/leetcode/blob/master/303-range-sum-query-immutable/range-sum-query-immutable.py)|[:memo:](https://leetcode.com/articles/range-sum-query-immutable/)|Easy|
