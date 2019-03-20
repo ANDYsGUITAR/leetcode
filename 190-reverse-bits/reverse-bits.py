@@ -41,10 +41,7 @@ class Solution:
     # @param n, an integer
     # @return an integer
     def reverseBits(self, n):
-        s = r'^(0b)(.*)'
-        b_str = bin(n)
-        m = re.match(s,b_str)
-        zero_one = m.group(2)
+        zero_one = '{0:b}'.format(n)
         length = len(zero_one)
         zero_one = '0'*(32-length)+zero_one
         reverse = zero_one[::-1]

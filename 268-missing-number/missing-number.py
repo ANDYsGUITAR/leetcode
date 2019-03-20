@@ -24,8 +24,15 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        # n = len(nums)
+        # result = nums[0]^0
+        # for i in range(1,n):
+        #     result = result^nums[i]^i
+        # return result^n
         n = len(nums)
-        result = nums[0]^0
-        for i in range(1,n):
-            result = result^nums[i]^i
-        return result^n
+        result = 0
+        for num in nums:
+            result ^= num
+        for i in range(n + 1):
+            result ^= i
+        return result

@@ -38,5 +38,18 @@ class Solution:
         :type n: int
         :rtype: float
         """
-        return x**n
-        
+        # return x**n
+        answer = 1
+        if n == 0:
+            return 1
+        elif n > 0:
+            cur = x
+        else:
+            cur = 1/x
+        tmp = abs(n)
+        while tmp:
+            if tmp&1:
+                answer *= cur
+            tmp = tmp >> 1
+            cur *= cur
+        return answer

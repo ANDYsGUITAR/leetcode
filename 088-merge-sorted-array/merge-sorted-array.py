@@ -28,10 +28,19 @@ class Solution:
         :type n: int
         :rtype: void Do not return anything, modify nums1 in-place instead.
         """
-        nums1[m:m+n] = nums2[:]
-        print(nums1)
-        for i in range(n+m):
-            for j in range(n+m-1-i):
-                if nums1[j] > nums1[j+1]:
-                    nums1[j], nums1[j+1] = nums1[j+1], nums1[j]
-        
+        # O(n^2)
+        # nums1[m:m+n] = nums2[:]
+        # print(nums1)
+        # for i in range(n+m):
+        #     for j in range(n+m-1-i):
+        #         if nums1[j] > nums1[j+1]:
+        #             nums1[j], nums1[j+1] = nums1[j+1], nums1[j]
+        while m > 0 and n > 0:
+            if nums1[m - 1] >= nums2[n - 1]:
+                nums1[m + n - 1] = nums1[m - 1]
+                m -= 1
+            else:
+                nums1[m + n - 1] = nums2[n - 1]
+                n -= 1
+        if n > 0:
+            nums1[:n] = nums2[:n]

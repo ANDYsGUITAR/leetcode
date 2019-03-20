@@ -34,8 +34,8 @@ class MyQueue:
         """
         Initialize your data structure here.
         """
-        self.data = []
-        
+        self.inStack = []
+        self.outStack = []
 
     def push(self, x):
         """
@@ -43,21 +43,23 @@ class MyQueue:
         :type x: int
         :rtype: void
         """
-        self.data.append(x)
+        self.inStack.append(x)
 
     def pop(self):
         """
         Removes the element from in front of queue and returns that element.
         :rtype: int
         """
-        return self.data.pop(0)
+        self.move()
+        return self.outStack.pop()
 
     def peek(self):
         """
         Get the front element.
         :rtype: int
         """
-        return self.data[0]
+        self.move()
+        return self.outStack[-1]
         
 
     def empty(self):
@@ -65,10 +67,12 @@ class MyQueue:
         Returns whether the queue is empty.
         :rtype: bool
         """
-        if self.data == []:
-            return True
-        else:
-            return False
+        return not self.inStack and not self.outStack
+    
+    def move(self):
+        if not self.outStack:
+            for _ in range(len(self.inStack)):
+                self.outStack.append(self.inStack.pop())
         
 
 

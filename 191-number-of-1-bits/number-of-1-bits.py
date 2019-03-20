@@ -52,6 +52,5 @@ class Solution(object):
         :rtype: int
         """
         b_str = '{0:b}'.format(n)
-        b_list = [int(x) for x in b_str]
-        return sum(b_list)
+        return b_str.count('1')
         

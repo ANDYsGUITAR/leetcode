@@ -38,4 +38,3 @@ class Solution:
         for i in range(2,len(result)):
             result[i] = max(nums[i]+result[i-2],result[i-1])
         return result[len(nums)-1]
-        

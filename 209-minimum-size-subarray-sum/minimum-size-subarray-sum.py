@@ -20,22 +20,19 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        if not nums:
-            return 0
-        if nums[0] >= s:
-            return 1
-        res = nums[0]
-        minlen = len(nums) + 1
-        j = 0
-        for i in range(1, len(nums)):
-            res += nums[i]
-            if res >= s:
-                while res >= s:
-                    res -= nums[j]
-                    j += 1
-                j -= 1
-                res += nums[j]
-                minlen = min(minlen, i - j + 1)          
-        return minlen if minlen != len(nums) + 1 else 0
+        min_length = sum_cur = start = 0
+        
+        for cur, num in enumerate(nums):
+            sum_cur += num
+            if sum_cur >= s:
+                while sum_cur >= s:
+                    sum_cur -= nums[start]
+                    start += 1
+                
+                if min_length:
+                    min_length = min(min_length, cur - start + 2)
+                else:
+                    min_length = cur - start + 2
+        return min_length
         
         

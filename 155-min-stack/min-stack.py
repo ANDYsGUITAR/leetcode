@@ -44,7 +44,12 @@ class MinStack:
         :type x: int
         :rtype: void
         """
-        self.data.append(x)
+        curMin = self.getMin()
+        if curMin is None or x < curMin:
+            self.data.append([x, x])
+        else:
+            self.data.append([x, curMin])
+        
         
 
     def pop(self):
@@ -58,14 +63,17 @@ class MinStack:
         """
         :rtype: int
         """
-        return self.data[len(self.data)-1]
+        return self.data[len(self.data)-1][0]
         
 
     def getMin(self):
         """
         :rtype: int
         """
-        return min(self.data)
+        if not self.data:
+            return None
+        return self.data[len(self.data) - 1][1]
+        
         
 
 
